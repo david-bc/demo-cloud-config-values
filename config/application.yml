@@ -8,3 +8,10 @@ bc.application.party: true
 ---
 spring profiles: secure
 bc.application.secure: true
+
+---
+spring profiles: secure,party
+bc.application:
+  party: true
+  secure: true
+  privateParty: true
