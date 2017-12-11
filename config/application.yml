@@ -1,2 +1,10 @@
 bc:
   conf.version: 0.0.0
+
+---
+spring.profiles: party
+bc.application.party: true
+
+---
+spring profiles: secure
+bc.application.secure: true
