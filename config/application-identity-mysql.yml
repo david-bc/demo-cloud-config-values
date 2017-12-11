@@ -1,0 +1,31 @@
+bc.mysql.conf.version: 0.1.0
+spring:
+  jpa.hibernate.ddl-auto: none
+
+---
+spring.profiles: dev
+spring.datasource:
+  url: jdbc:mysql://localhost:3306/dummy_database_name
+  username: user
+  password:
+
+---
+spring.profiles: holding
+spring.datasource:
+  url: jdbc:mysql://deployed-testing.bc.io:3306/dummy_database_name
+  username: testuser
+  password: password
+
+---
+spring.profiles: staging
+spring.datasource:
+  url: jdbc:mysql://deployed-preprod.bc.io:3306/dummy_database_name
+  username: preproduser
+  password: password
+
+---
+spring.profiles: load
+spring.datasource:
+  url: jdbc:mysql://loadtest.bc.io:3306/dummy_database_name
+  username: loadtestuser
+  password: password
